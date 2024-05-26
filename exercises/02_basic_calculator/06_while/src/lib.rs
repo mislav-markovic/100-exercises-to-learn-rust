@@ -4,7 +4,15 @@ pub fn factorial(n: u32) -> u32 {
     // interprets as "I'll get back to this later", thus
     // suppressing type errors.
     // It panics at runtime.
-    todo!()
+
+    let mut product: u32 = 1;
+    let mut factor = 1;
+
+    while factor <= n {
+        product *= factor;
+        factor += 1;
+    }
+    product
 }
 
 #[cfg(test)]
